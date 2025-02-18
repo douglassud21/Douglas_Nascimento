@@ -421,6 +421,91 @@ main {
 
 
 
+.timeline {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    /* A altura ocupa 100% da tela */
+    padding: 50px 0;
+}
+
+.timeline-items {
+    display: flex;
+    width: max-content;
+    gap: 30px;
+}
+
+.timeline-item {
+    width: 100vw;
+    /* Cada item ocupa toda a largura da tela */
+    height: 100vh;
+    /* Cada item ocupa toda a altura da tela */
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content {
+    text-align: center;
+    max-width: 80%;
+    /* Limitar a largura do conteúdo dentro do item */
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.projetos {
+    height: 100vh;
+    background-color: #ff4757;
+}
+.servicos {
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
