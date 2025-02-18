@@ -178,16 +178,15 @@ header {
 
 
 .hero {
-    height: 92vh;
+    height: auto;
+    min-height: 92vh;
     margin-top: 8vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #121212;
-    /* Cor de fundo */
     padding: 100px 50px;
     text-align: left;
-    /* Alinha o texto à esquerda */
 }
 
 .conteudo_hero {
@@ -197,11 +196,11 @@ header {
     align-items: center;
     padding: 5rem;
     width: 95%;
+    flex-wrap: wrap;
 }
 
 .text_hero {
     max-width: 50%;
-    /* Limita a largura do texto */
     font-family: 'Arial', sans-serif;
     color: #fff;
 }
@@ -239,47 +238,37 @@ header {
 .button_hero a {
     text-decoration: none;
     background: linear-gradient(135deg, #ff4757, #ff6b81);
-    /* Gradiente de cores */
     color: #fff;
     padding: 12px 25px;
-    /* Tamanho maior para mais destaque */
     font-size: 20px;
-    /* Aumentando o tamanho da fonte */
     border-radius: 50px;
-    /* Bordas arredondadas */
     display: inline-block;
     margin-top: 20px;
     box-shadow: 0 8px 20px rgba(255, 71, 87, 0.5);
-    /* Sombra suave */
     transition: all 0.4s ease;
-    /* Transição suave para todas as propriedades */
 }
 
 .button_hero a:hover {
     background: linear-gradient(135deg, #ff6b81, #ff4757);
-    /* Reversão do gradiente no hover */
     box-shadow: 0 12px 30px rgba(255, 71, 87, 0.7);
-    /* Efeito de sombra mais forte */
     transform: translateY(-5px);
-    /* Leve levantamento do botão */
 }
 
 .button_hero a:focus {
     outline: none;
-    /* Remove o contorno no foco */
     box-shadow: 0 0 15px rgba(255, 71, 87, 0.8);
-    /* Sombra ao focar */
 }
 
 .icons_hero {
     margin-top: 40px;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .icons_hero img {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     object-fit: cover;
     opacity: 0.7;
     transition: transform 0.3s, opacity 0.3s;
@@ -290,10 +279,8 @@ header {
     opacity: 1;
 }
 
-/* Ajustes para a imagem à direita */
 .img_hero {
     max-width: 50%;
-    /* Limita a largura da imagem */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -304,6 +291,96 @@ header {
     height: auto;
     border-radius: 10px;
     object-fit: cover;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .conteudo_hero {
+        flex-direction: column;
+        padding: 3rem;
+        text-align: center;
+    }
+
+    .text_hero,
+    .img_hero {
+        max-width: 100%;
+    }
+
+    .text_hero h1,
+    .text_hero h2,
+    .text_hero p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .text_hero {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    .text_hero h1 {
+        font-size: 24px;
+    }
+
+    .text_hero h1 span {
+        font-size: 30px;
+    }
+
+    .text_hero h2 {
+        font-size: 24px;
+    }
+
+    .button_hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button_hero a {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+        .img_hero {
+            display: none;
+        }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .text_hero h1 {
+        font-size: 20px;
+    }
+
+    .text_hero h1 span {
+        font-size: 26px;
+    }
+
+    .text_hero h2 {
+        font-size: 20px;
+    }
+
+    .text_hero p {
+        font-size: 16px;
+    }
+
+    .button_hero a {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+        .img_hero {
+            display: none;
+        }
 }
 
 
