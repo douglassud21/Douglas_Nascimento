@@ -1,10 +1,3 @@
-
-document.addEventListener("DOMContentLoaded", () => {
-  const mobileMenu = document.querySelector(".mobile-menu");
-  const navList = document.querySelector(".list");
-
-  mobileMenu.addEventListener("click", () => {
-    mobileMenu.classList.toggle("active");
-    navList.classList.toggle("active");
-  });
+document.querySelector(".menu_toggle").addEventListener("click", function () {
+  document.querySelector(".mobile_nav").classList.toggle("show");
 });
