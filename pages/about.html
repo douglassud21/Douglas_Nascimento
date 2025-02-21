@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About-me</title>
+    <link href="/css/styles_about.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <div class="logo">
+        <h1>Tudo<br/>Sobre<br/>Mim</h1>
+    </div>
+
+    <div class="wrapper">
+        <section class="intro">
+            <div class="line"></div>
+        </section>
+
+        <section class="saitama character">
+            <div class="block"></div>
+            <img src="/img/saitama.png" alt=""><span class="huge-text">ADS</span>
+            <div class="caption">
+                Formado em Análise e Desenvolvimento de Sistemas pela Cruzeiro do Sul, adquiri uma base sólida em tecnologia e desenvolvimento de software.
+                 Durante essa formação, aprimorei habilidades essenciais, como lógica de programação, estrutura de dados, desenvolvimento web, banco de dados e engenharia de software.
+                <hr>
+                Além do conhecimento técnico, desenvolvi uma mentalidade analítica para resolver problemas, otimizar processos e criar soluções eficientes e escaláveis.
+                 Essa jornada me proporcionou não apenas domínio das ferramentas da área, mas também a capacidade de inovar e evoluir constantemente no mundo da tecnologia.            
+            </div>
+            <div class="nickname"><span>Formação:</span>Análise e desenvolvimento de Sistemas</div>
+            <div class="quote">
+                "Transformando desafios em soluções inteligentes através da tecnologia."
+            </div>
+        </section>
+
+        <section class="genos character">
+            <div class="block"></div>
+            <img src="/img/genos.png" alt=""><span class="huge-text">ES</span>
+            <div class="caption">
+                A formação em Engenharia de Software me proporcionou um conhecimento aprofundado sobre o ciclo de vida do desenvolvimento de software, 
+                abordando desde a análise de requisitos até a entrega de produtos de alta qualidade. Durante o curso, aprimorei habilidades como arquitetura de software, 
+                design de sistemas, testes automatizados e metodologias ágeis, sempre com foco em criar soluções robustas e escaláveis.
+                <hr>
+                Além do domínio técnico, desenvolvi uma visão estratégica para otimizar processos, melhorar a experiência do usuário e garantir a qualidade do código, 
+                aplicando as melhores práticas da engenharia de software. Essa experiência me capacita a enfrentar desafios tecnológicos de forma estruturada e inovadora.
+            </div>
+            <div class="nickname"><span>Formação:</span>Engenharia de Software</div>
+            <div class="quote">
+                "Da arquitetura à implementação: construindo software com eficiência e inovação."
+            </div>
+        </section>
+
+        
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="/app.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const sections = gsap.utils.toArray('section');
+
+            let scrollTween = gsap.to(sections, {
+                xPercent: -100 * (sections.length - 1),
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.wrapper',
+                    pin: true,
+                    scrub: 0.5,
+                    snap: 1 / (sections.length - 1),
+                    start: 'top top',
+                    end: 3000,
+                }
+            })
+
+            gsap.to('.logo', {
+                fontSize: '2.5rem',
+                top: '4rem',
+                scrollTrigger: {
+                    trigger: '.logo',
+                    start: 'top top',
+                    end: 1500,
+                    scrub: 0.5,
+                }
+            })
+
+            gsap.to('.line', {
+                height: '10rem',
+                scrollTrigger: {
+                    trigger: '.line',
+                    scrub: 0.5,
+                    start: 'center center',
+                    end: 2000,
+                }
+            })
+
+            document.querySelectorAll('.character').forEach(el => {
+
+                gsap.to(el.querySelector('.caption'), {
+                    x: 0,
+                    y: 0,
+                    scrollTrigger: {
+                        containerAnimation: scrollTween,
+                        trigger: el.querySelector('.caption'),
+                        start: 'top bottom',
+                        end: '+=1000',
+                        scrub: 0.5,
+                    }
+                })
+
+                gsap.to(el.querySelector('.quote'), {
+                    y: 0,
+                    ease: 'none',
+                    scrollTrigger: {
+                        containerAnimation: scrollTween,
+                        trigger: el.querySelector('.quote'),
+                        start: 'top bottom',
+                        end: '+=20%',
+                        scrub: 0.5,
+                    }
+                })
+
+                gsap.to(el.querySelector('.nickname'), {
+                    y: 0,
+                    ease: 'none',
+                    scrollTrigger: {
+                        containerAnimation: scrollTween,
+                        trigger: el.querySelector('.nickname'),
+                        start: 'top bottom',
+                        end: '+=10%',
+                        scrub: 0.5,
+                    }
+                })
+
+                gsap.to(el.querySelector('.block'), {
+                    x: 0,
+                    ease: 'none',
+                    scrollTrigger: {
+                        containerAnimation: scrollTween,
+                        trigger: el.querySelector('.block'),
+                        start: 'top bottom',
+                        end: '+=' + window.innerWidth,
+                        scrub: 0.5,
+                    }
+                })
+
+                gsap.to(el.querySelector('img'), {
+                    y: 0,
+                    ease: 'none',
+                    scrollTrigger: {
+                        containerAnimation: scrollTween,
+                        trigger: el.querySelector('img'),
+                        start: 'top bottom',
+                        end: '+=50%',
+                        scrub: 0.5,
+                    }
+                })
+
+                gsap.to(el.querySelector('.huge-text'), {
+                    y: 0,
+                    ease: 'none',
+                    scrollTrigger: {
+                        containerAnimation: scrollTween,
+                        trigger: el.querySelector('.huge-text'),
+                        start: 'top bottom',
+                        end: '+=100%',
+                        scrub: 0.5,
+                    }
+                })
+
+            })
+
+        })
+    </script>
+</body>
+</html>
