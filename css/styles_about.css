@@ -17,7 +17,7 @@ body {
 }
 
 .wrapper {
-    background-color: #f1f1f1;
+    background-color: #fff;
     width: 300%;
     height: 100%;
     display: flex;
@@ -32,6 +32,7 @@ body {
     top: 15%;
     left: 4rem;
     line-height: 0.9;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .line {
@@ -74,12 +75,12 @@ section.character::before {
 
 .saitama::before,
 .saitama .block {
-    background-color: #ffcc99;
+    background-color: #121212;
 }
 
 .genos::before,
 .genos .block {
-    background-color: #ffcc99;
+    background-color: #121212;
 }
 
 .caption {
@@ -88,8 +89,12 @@ section.character::before {
     left: 4rem;
     width: 30%;
     font-weight: 400;
-    color: #444;
+    color: #121212;
     font-family: monospace;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     transform: translate(100%, 100%);
 }
 
@@ -105,30 +110,35 @@ section.character::before {
     font-size: 25rem;
     width: 100%;
     text-align: center;
-    color: #121212;
+    color: #ffcc99;
     position: absolute;
     top: 20%;
     left: 0;
     transform: translateY(100%);
     font-weight: 700;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .nickname {
+    color: #ffcc99;
     position: absolute;
     top: 4rem;
     right: 4rem;
     font-size: 3rem;
     text-align: right;
     transform: translateY(-200%);
+    text-shadow: 4px 4px 10px rgba(95, 95, 95, 0.267);
 }
 
 .nickname span {
     display: block;
     font-size: 70%;
-    color: #fff;
+    color: #ffcc99;
+    text-shadow: 4px 4px 10px rgba(95, 95, 95, 0.267);
 }
 
 .quote {
+    color: #ffcc99;
     position: absolute;
     bottom: 4rem;
     right: 4rem;
@@ -136,10 +146,11 @@ section.character::before {
     width: 30%;
     text-align: right;
     transform: translateY(200%);
+    text-shadow: 4px 4px 10px rgba(95, 95, 95, 0.267);
 }
 
 .quote::before,
 .quote::after {
     content: '';
-    color: #fff;
+    color: #ffcc99;
 }

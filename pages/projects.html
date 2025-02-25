@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos</title>
+    <link rel="stylesheet" href="/css/prjects.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <div id="loader">
+        <div class="spinner"></div>
+        <h1>Carregando...</h1>
+    </div>
+    
+    <main style="display: none;">
+        <section id="projetos">
+            <div class="projeto">
+                <img src="/assets/img/house.png" alt="Projeto 1">
+                <h2>Projeto 1</h2>
+                <p>Descrição do projeto 1. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div class="projeto">
+                <img src="/assets/img/nike.png" alt="Projeto 2">
+                <h2>Projeto 2</h2>
+                <p>Descrição do projeto 2. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div class="projeto">
+                <img src="/assets/img/stranger.png" alt="Projeto 3">
+                <h2>Projeto 3</h2>
+                <p>Descrição do projeto 3. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div class="projeto">
+                <img src="/assets/img/stranger.png" alt="Projeto 4">
+                <h2>Projeto 4</h2>
+                <p>Descrição do projeto 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div class="projeto">
+                <img src="/assets/img/stranger.png" alt="Projeto 4">
+                <h2>Projeto 4</h2>
+                <p>Descrição do projeto 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div class="projeto">
+                <img src="/assets/img/stranger.png" alt="Projeto 4">
+                <h2>Projeto 4</h2>
+                <p>Descrição do projeto 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div class="projeto">
+                <img src="/assets/img/stranger.png" alt="Projeto 4">
+                <h2>Projeto 4</h2>
+                <p>Descrição do projeto 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div class="projeto">
+                <img src="/assets/img/stranger.png" alt="Projeto 4">
+                <h2>Projeto 4</h2>
+                <p>Descrição do projeto 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div class="projeto">
+                <img src="/assets/img/stranger.png" alt="Projeto 4">
+                <h2>Projeto 4</h2>
+                <p>Descrição do projeto 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div class="projeto">
+                <img src="/assets/img/stranger.png" alt="Projeto 4">
+                <h2>Projeto 4</h2>
+                <p>Descrição do projeto 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div class="projeto">
+                <img src="/assets/img/stranger.png" alt="Projeto 4">
+                <h2>Projeto 4</h2>
+                <p>Descrição do projeto 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div class="projeto">
+                <img src="/assets/img/stranger.png" alt="Projeto 4">
+                <h2>Projeto 4</h2>
+                <p>Descrição do projeto 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div class="projeto">
+                <img src="/assets/img/stranger.png" alt="Projeto 4">
+                <h2>Projeto 4</h2>
+                <p>Descrição do projeto 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div class="projeto">
+                <img src="/assets/img/stranger.png" alt="Projeto 4">
+                <h2>Projeto 4</h2>
+                <p>Descrição do projeto 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div class="projeto">
+                <img src="/assets/img/stranger.png" alt="Projeto 4">
+                <h2>Projeto 4</h2>
+                <p>Descrição do projeto 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div class="projeto">
+                <img src="/assets/img/stranger.png" alt="Projeto 4">
+                <h2>Projeto 4</h2>
+                <p>Descrição do projeto 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div class="projeto">
+                <img src="/assets/img/stranger.png" alt="Projeto 4">
+                <h2>Projeto 4</h2>
+                <p>Descrição do projeto 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+            <div class="projeto">
+                <img src="/assets/img/stranger.png" alt="Projeto 4">
+                <h2>Projeto 4</h2>
+                <p>Descrição do projeto 4. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#">Ver mais</a>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        gsap.to("#loader", {duration: 1.5, opacity: 0, delay: 3, onComplete: function() {
+            document.getElementById("loader").style.display = "none";
+            document.querySelector("main").style.display = "block";
+            gsap.fromTo(".projeto", {
+                x: "-100vw",
+            }, {
+                x: "0",
+                duration: 1.5,
+                ease: "power2.out",
+                stagger: 0.2
+            });
+        }});
+    </script>
+</body>
+</html>
